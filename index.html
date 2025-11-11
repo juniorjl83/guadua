@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guadua — Emergency Services Platform</title>
+  <meta name="description" content="Guadua is an on-demand emergency services platform for urgent home repairs — plumbing, electrical, locksmith. Medellín & Sabaneta MVP." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#009E60',
+            bamboo: '#F5F1E6',
+            charcoal: '#333333'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Apple Color Emoji','Segoe UI Emoji']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-charcoal antialiased bg-white">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#" class="flex items-center gap-2">
+        <img src="logo.svg" alt="Guadua" class="h-8 w-8" />
+        <span class="font-semibold">Guadua</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#problem" class="hover:text-brand" data-i18n="nav.problem">Problem</a>
+        <a href="#solution" class="hover:text-brand" data-i18n="nav.solution">Solution</a>
+        <a href="#model" class="hover:text-brand" data-i18n="nav.model">Business Model</a>
+        <a href="#market" class="hover:text-brand" data-i18n="nav.market">Market</a>
+        <a href="#vision" class="hover:text-brand" data-i18n="nav.vision">Vision</a>
+        <a href="#contact" class="hover:text-brand" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="lang-es" class="px-3 py-1.5 rounded-full text-sm border hover:bg-gray-50">ES</button>
+        <button id="lang-en" class="px-3 py-1.5 rounded-full text-sm border bg-gray-900 text-white">EN</button>
+        <a href="#contact" class="ml-2 hidden sm:inline-flex items-center px-4 py-2 rounded-xl bg-brand text-white text-sm font-medium shadow hover:opacity-90" data-i18n="cta.invest">Invest Now</a>
+        <button id="menu" class="md:hidden p-2 rounded-lg border"><span class="sr-only">Menu</span>☰</button>
+      </div>
+    </div>
+    <div id="mobile" class="md:hidden hidden border-t">
+      <nav class="px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#problem" class="hover:text-brand" data-i18n="nav.problem">Problem</a>
+        <a href="#solution" class="hover:text-brand" data-i18n="nav.solution">Solution</a>
+        <a href="#model" class="hover:text-brand" data-i18n="nav.model">Business Model</a>
+        <a href="#market" class="hover:text-brand" data-i18n="nav.market">Market</a>
+        <a href="#vision" class="hover:text-brand" data-i18n="nav.vision">Vision</a>
+        <a href="#contact" class="hover:text-brand" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-bamboo to-white"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight mb-4" data-i18n="hero.title">
+          The fastest, most trusted home emergency network in LATAM.
+        </h1>
+        <p class="text-lg text-gray-700 mb-8" data-i18n="hero.subtitle">
+          On-demand electricians, plumbers and locksmiths. Transparent pricing, verified professionals, secure payments.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="px-5 py-3 rounded-xl bg-brand text-white font-medium shadow" data-i18n="cta.invest">Invest Now</a>
+          <a href="#solution" class="px-5 py-3 rounded-xl border font-medium" data-i18n="cta.learn">Learn More</a>
+          <a href="https://wa.me/573001112233" target="_blank" class="px-5 py-3 rounded-xl border font-medium" data-i18n="cta.whatsapp">WhatsApp</a>
+        </div>
+        <p class="mt-6 text-sm text-gray-600" data-i18n="hero.geo">Launching MVP in Medellín (Laureles, Poblado, Ciudad del Río) & Sabaneta.</p>
+      </div>
+      <div class="lg:justify-self-end">
+        <div class="rounded-2xl border shadow-lg p-6 bg-white">
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div>
+              <div class="text-3xl font-bold">10<span class="text-brand">min</span></div>
+              <div class="text-xs text-gray-600" data-i18n="metrics.dispatch">Avg dispatch</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">24/7</div>
+              <div class="text-xs text-gray-600" data-i18n="metrics.availability">Availability</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold">5★</div>
+              <div class="text-xs text-gray-600" data-i18n="metrics.rating">Rating system</div>
+            </div>
+          </div>
+          <img src="hero-illustration.svg" alt="Illustration" class="mt-6 w-full" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section id="problem" class="py-16 sm:py-20 border-t">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4" data-i18n="section.problem.title">The Problem</h2>
+      <p class="text-gray-700 leading-relaxed" data-i18n="section.problem.body">
+        Home emergencies like leaks, short circuits, or broken locks are unpredictable. Finding a reliable, verified technician is slow, risky, and stressful. The market lacks a unified, trusted system that verifies workers, guarantees fair pricing, and ensures rapid response.
+      </p>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section id="solution" class="py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-8" data-i18n="section.solution.title">Our Solution (MVP)</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border p-6">
+          <ul class="space-y-3 text-gray-700">
+            <li data-i18n="solution.1"><strong>Instant matching</strong> with nearest certified professionals.</li>
+            <li data-i18n="solution.2"><strong>Training & certifications</strong> for plumbers, electricians, and more.</li>
+            <li data-i18n="solution.3"><strong>Shared warehouse (bodega)</strong> with quality tools and materials.</li>
+            <li data-i18n="solution.4"><strong>Benefits & incentives</strong> (rest zones, coffee, Wi‑Fi, showers).</li>
+            <li data-i18n="solution.5"><strong>Transparent pricing</strong>, ratings, and secure payments.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border p-6">
+          <h3 class="font-semibold mb-3" data-i18n="section.stack.title">Tech Stack</h3>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li>Frontend: React / Vue / TailwindCSS</li>
+            <li>Backend: Java Spring Boot / Node.js</li>
+            <li>Infra: AWS (ECS, S3, DynamoDB, CloudWatch)</li>
+            <li>Payments: Stripe / MercadoPago</li>
+            <li data-i18n="stack.ai">AI: demand prediction, dynamic pricing, route optimization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Model -->
+  <section id="model" class="py-16 sm:py-20 border-t">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6" data-i18n="section.model.title">Business Model</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border p-6">
+          <ol class="list-decimal pl-5 text-gray-700 space-y-2">
+            <li data-i18n="model.1"><strong>Commission (15–20%)</strong> per completed service.</li>
+            <li data-i18n="model.2"><strong>Monthly membership</strong> for warehouse, training & job priority.</li>
+            <li data-i18n="model.3"><strong>Partnerships</strong> with hardware stores & insurers.</li>
+            <li data-i18n="model.4"><strong>B2B maintenance</strong> for buildings & offices.</li>
+          </ol>
+        </div>
+        <div class="rounded-2xl border p-6">
+          <h3 class="font-semibold mb-3" data-i18n="section.market.title">Target Market</h3>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li data-i18n="market.1">Initial focus: Medellín & Sabaneta.</li>
+            <li data-i18n="market.2">Customers: mid–high income households, property managers, SMBs.</li>
+            <li data-i18n="market.3">Professionals: certified electricians, plumbers, repair specialists.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision -->
+  <section id="vision" class="py-16 sm:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6" data-i18n="section.vision.title">Growth Vision</h2>
+      <ol class="space-y-3 text-gray-700">
+        <li data-i18n="vision.1"><strong>Phase 1</strong> — Launch in Medellín & Sabaneta (MVP).</li>
+        <li data-i18n="vision.2"><strong>Phase 2</strong> — Expand to Bogotá, Cali, Cartagena.</li>
+        <li data-i18n="vision.3"><strong>Phase 3</strong> — Regional scaling to Mexico, Chile, Brazil, and Peru.</li>
+        <li data-i18n="vision.4"><strong>Phase 4</strong> — Smart diagnostics & AI scheduling.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 sm:py-20 border-t bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6" data-i18n="section.contact.title">Contact & Investor Relations</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <form class="rounded-2xl border bg-white p-6 shadow-sm" action="mailto:invest@guadua.app" method="post" enctype="text/plain">
+          <label class="block text-sm font-medium mb-1" data-i18n="form.name">Name</label>
+          <input name="name" class="w-full mb-3 border rounded-lg px-3 py-2" placeholder="Jane Doe" required>
+          <label class="block text-sm font-medium mb-1" data-i18n="form.email">Email</label>
+          <input type="email" name="email" class="w-full mb-3 border rounded-lg px-3 py-2" placeholder="investor@vc.com" required>
+          <label class="block text-sm font-medium mb-1" data-i18n="form.message">Message</label>
+          <textarea name="message" class="w-full mb-4 border rounded-lg px-3 py-2" rows="4" placeholder="Tell us about your thesis…" required></textarea>
+          <button class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-brand text-white font-medium" data-i18n="form.send">Send</button>
+        </form>
+        <div class="rounded-2xl border bg-white p-6 shadow-sm">
+          <p class="text-gray-700 mb-3"><strong>Guadua</strong><br>Medellín, Colombia</p>
+          <p class="text-gray-700 mb-3">🌐 <a href="#" class="underline">www.guadua.app</a></p>
+          <p class="text-gray-700 mb-6">📧 invest@guadua.app • inversion@guadua.app</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://wa.me/573001112233" target="_blank" class="px-5 py-2.5 rounded-xl border font-medium" data-i18n="cta.whatsapp">WhatsApp</a>
+            <a href="mailto:invest@guadua.app" class="px-5 py-2.5 rounded-xl border font-medium" data-i18n="cta.email">Email us</a>
+          </div>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-gray-500" data-i18n="legal">© {year} Guadua. All rights reserved.</p>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+  <script>
+    // Simple mobile menu toggle
+    document.getElementById('menu').addEventListener('click', () => {
+      document.getElementById('mobile').classList.toggle('hidden');
+    });
+    // Replace year
+    document.querySelectorAll('[data-i18n="legal"]').forEach(el => {
+      el.innerHTML = el.innerHTML.replace('{year}', new Date().getFullYear());
+    });
+  </script>
+</body>
+</html>
